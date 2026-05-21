@@ -1,0 +1,769 @@
+:root{
+    --green:#2F5E4A;
+    --green-light:#3F7A60;
+    --border:#eef3f0;
+    --text-dark:#1C2B22;
+    --text-light:#6B7D73;
+    --bg:#f9fbf9;
+    --soft:#f1f5f2;
+    --white:#fff;
+    --danger:#b5554f;
+    --warning:#a56a00;
+    --blue:#3566a8;
+    --shadow:0 8px 18px rgba(0,40,20,.05);
+}
+
+/* ===== Order Details Page ===== */
+.order-details-container{
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:28px;
+    overflow:hidden;
+}
+
+.invoice-card{
+    background:var(--white);
+}
+
+.page-title,
+.details-title-block{
+    display:block;
+    background:transparent;
+    border:0;
+    border-radius:0;
+    padding:0;
+    margin:0 0 22px;
+}
+
+.page-title h1,
+.details-title-block h1,
+.review-plant-title{
+    margin:0 0 7px;
+    color:var(--text-dark);
+    font-size:1.9rem;
+    font-weight:700;
+    line-height:1.2;
+}
+
+.page-description,
+.muted-text,
+.small-muted{
+    color:var(--text-light);
+    font-size:.95rem;
+    margin:0;
+    line-height:1.6;
+}
+
+.page-label{
+    margin:0 0 6px;
+    color:var(--green);
+    font-size:.78rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.invoice-header-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:var(--shadow);
+}
+
+.invoice-header-card h2{
+    margin:0;
+    color:var(--text-dark);
+    font-size:1.65rem;
+    font-weight:700;
+}
+
+.invoice-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+.status-pill,
+.status-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    border-radius:14px;
+    padding:8px 13px;
+    font-size:13px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.sp-pending,
+.status-pending{background:#fff7e6;color:var(--warning)}
+.sp-processing,
+.status-processing{background:#fff4d7;color:var(--warning)}
+.sp-shipped,
+.status-shipped{background:#e8f1ff;color:var(--blue)}
+.sp-delivered,
+.sp-completed,
+.status-delivered{background:#e7f6e8;color:#2e7d32}
+.sp-cancelled{background:#fde8e8;color:var(--danger)}
+
+.order-info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:16px;
+    margin:20px 0 26px;
+}
+
+.info-card,
+.delivery-card,
+.review-product-card,
+.review-form{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.info-card{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    min-height:102px;
+    padding:18px;
+}
+
+.info-icon,
+.delivery-icon{
+    width:42px;
+    height:42px;
+    min-width:42px;
+    border-radius:14px;
+    background:var(--soft);
+    display:grid;
+    place-items:center;
+    color:var(--green);
+}
+
+.info-content h4,
+.delivery-content h4{
+    margin:0 0 5px;
+    color:var(--text-dark);
+    font-size:.9rem;
+    font-weight:700;
+}
+
+.info-content p,
+.delivery-content p{
+    margin:0;
+    color:var(--text-light);
+    font-size:.92rem;
+    line-height:1.5;
+}
+
+.info-content p{
+    color:var(--text-dark);
+    font-weight:700;
+}
+
+.section-title{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    font-size:1.25rem;
+    color:var(--text-dark);
+    margin:26px 0 14px;
+    font-weight:700;
+}
+
+.section-title i{
+    color:var(--green);
+}
+
+.table-wrap{
+    width:100%;
+    overflow-x:auto;
+    border-radius:18px;
+}
+
+.products-table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.products-table th{
+    background:#f1f5f2;
+    color:var(--text-dark);
+    text-align:left;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    padding:15px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.products-table td{
+    padding:15px;
+    border-top:1px solid var(--border);
+    vertical-align:middle;
+    color:var(--text-dark);
+}
+
+.products-table tbody tr:hover td{
+    background:#fbfdfb;
+}
+
+.product-info{
+    display:flex;
+    gap:13px;
+    align-items:center;
+    min-width:210px;
+}
+
+.product-image{
+    width:58px;
+    height:58px;
+    border-radius:14px;
+    overflow:hidden;
+    background:var(--soft);
+    border:1px solid var(--border);
+    min-width:58px;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.product-details h4{
+    margin:0;
+    color:var(--text-dark);
+    font-size:.95rem;
+    font-weight:700;
+}
+
+.price{
+    font-weight:700;
+    color:var(--text-dark);
+    white-space:nowrap;
+}
+
+.summary-row td{
+    font-weight:700;
+    background:#fbfdfb;
+    text-align:right;
+    color:var(--text-dark);
+}
+
+.summary-row td:first-child{
+    text-align:right;
+    color:var(--text-light);
+}
+
+.total-row td{
+    background:#f1f5f2!important;
+    font-weight:800;
+    color:var(--text-dark);
+    font-size:1rem;
+    text-align:right;
+}
+
+.delivery-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.delivery-card{
+    display:flex;
+    gap:13px;
+    align-items:flex-start;
+    padding:18px;
+    min-height:106px;
+}
+
+.timeline{
+    border-left:2px solid #dce6df;
+    margin-left:15px;
+    padding-left:23px;
+}
+
+.timeline-item{
+    position:relative;
+    margin:0 0 18px;
+}
+
+.timeline-dot{
+    position:absolute;
+    left:-33px;
+    top:3px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:var(--green);
+    border:4px solid white;
+    box-shadow:0 0 0 2px #dce6df;
+}
+
+.timeline-content h4{
+    margin:0;
+    color:var(--text-dark);
+    font-size:.95rem;
+    font-weight:700;
+}
+
+.timeline-content p{
+    margin:3px 0 0;
+    color:var(--text-light);
+    font-size:12px;
+}
+
+.btn,
+.btn-soft-pdf,
+.rate-link{
+    border:none;
+    border-radius:14px;
+    padding:12px 20px;
+    font-weight:600;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:.92rem;
+    transition:.25s;
+    white-space:nowrap;
+}
+
+.btn-primary,
+.btn-save{background:var(--green);color:#fff}
+.btn-primary:hover,
+.btn-save:hover{background:var(--green-light)}
+.btn-secondary{background:var(--soft);color:var(--text-dark)}
+.btn-secondary:hover{background:#e8efea}
+
+.btn-soft-pdf{
+    border:1.5px solid #f1d2cd;
+    background:#fff4f2;
+    color:#c0392b;
+}
+
+.btn-soft-pdf:hover{
+    background:#fde8e8;
+    border-color:#e8aaa2;
+}
+
+.pdf-title h1{
+    color:#c0392b;
+}
+
+.pdf-logo{
+    background:#fde8e8;
+    color:#c0392b;
+}
+
+.rate-link{
+    min-width:110px;
+    padding:10px 13px;
+    background:#f1f5f2;
+    color:var(--green);
+    font-size:13px;
+}
+
+.rate-link:hover{
+    background:var(--green);
+    color:#fff;
+}
+
+.rate-link.rated{
+    background:#eef6f1;
+    color:var(--green);
+}
+
+.rate-link.rated:hover{
+    background:var(--green);
+    color:#fff;
+}
+
+.action-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:12px;
+    margin-top:28px;
+    padding-top:22px;
+    border-top:1px solid var(--border);
+}
+
+/* Review Plant */
+.review-alert{display:flex;align-items:center;gap:9px;border-radius:14px;padding:14px 16px;margin-bottom:18px;font-weight:600}
+.review-alert.success{background:#e7f6e8;color:#2e7d32;border:1px solid #cfe8d0}
+.review-alert.error{background:#fde8e8;color:var(--danger);border:1px solid #f2c5c1}
+.review-layout{display:grid;grid-template-columns:310px 1fr;gap:20px;align-items:start}
+.review-product-card,.review-form{padding:22px}
+.review-product-img{width:100%;height:230px;border-radius:16px;overflow:hidden;background:var(--soft);margin-bottom:16px;border:1px solid var(--border)}
+.review-product-img img{width:100%;height:100%;object-fit:cover}
+.review-product-card h2{margin:0 0 6px;color:var(--text-dark);font-size:1.45rem;font-weight:700}
+.review-form{display:block}
+.form-label{display:block;color:var(--text-dark);font-weight:600;margin:0 0 8px;font-size:.95rem}
+.review-input,.review-textarea{width:100%;border:1px solid #dce6df;background:#fbfdfb;border-radius:14px;color:var(--text-dark);font-family:inherit;font-size:.95rem;padding:12px 14px;margin-bottom:16px;outline:none;transition:.25s}
+.review-input:focus,.review-textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(47,94,74,.15);background:#fff}
+.heart-rating{display:inline-flex;flex-direction:row-reverse;justify-content:flex-end;gap:6px;margin-top:2px}
+.heart-rating input{display:none}
+.heart-rating label{cursor:pointer;font-size:30px;color:#d7ded9;transition:.2s}
+.heart-rating label:hover,.heart-rating label:hover ~ label,.heart-rating input:checked ~ label{color:var(--danger);transform:translateY(-1px)}
+.review-actions{margin-top:18px}
+
+/* ===== PDF Invoice Used By html2pdf ===== */
+.pdf-only{display:none}
+
+.pdf-invoice{
+    width:794px;
+    min-height:1123px;
+    background:#fff;
+    color:#1C2B22;
+    font-family:Arial,Helvetica,sans-serif;
+    padding:48px;
+}
+
+.pdf-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:2px solid #2F5E4A;
+    padding-bottom:18px;
+    margin-bottom:20px;
+}
+
+.pdf-brand{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.pdf-logo{font-size:30px}
+.pdf-brand h2,
+.pdf-title h1{margin:0;color:#1C2B22}
+.pdf-brand p,
+.pdf-title p,
+.pdf-meta p{margin:5px 0;color:#6B7D73}
+.pdf-title{text-align:right}
+
+.pdf-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin:16px 0;
+}
+
+.pdf-box{
+    border:1px solid #dce6df;
+    border-radius:12px;
+    padding:14px;
+}
+
+.pdf-box h3{margin:0 0 8px;color:#1C2B22}
+.pdf-box p{margin:5px 0;font-size:13px}
+
+.pdf-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:16px;
+}
+
+.pdf-table th{
+    background:#f1f5f2;
+    color:#1C2B22;
+}
+
+.pdf-table th,
+.pdf-table td{
+    border:1px solid #dce6df;
+    padding:10px;
+    text-align:left;
+    font-size:13px;
+}
+
+.pdf-summary{
+    width:300px;
+    margin-left:auto;
+    margin-top:16px;
+}
+
+.pdf-summary p{
+    display:flex;
+    justify-content:space-between;
+    margin:0;
+    padding:9px 0;
+    border-bottom:1px solid #dce6df;
+}
+
+.pdf-summary .total{
+    font-size:18px;
+    color:#1C2B22;
+    font-weight:800;
+}
+
+/* ===== Standalone Invoice Page ===== */
+.print-invoice-body{
+    margin:0;
+    background:#f3f4f6;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#263128;
+}
+
+.print-invoice-body *{box-sizing:border-box}
+
+.print-invoice-body .invoice-page{
+    width:210mm;
+    min-height:297mm;
+    margin:0 auto;
+    background:white;
+    padding:14mm 16mm;
+    position:relative;
+}
+
+.print-invoice-body .top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:2px solid #66bb6a;
+    padding-bottom:12px;
+    margin-bottom:14px;
+}
+
+.print-invoice-body .brand h2{
+    margin:0;
+    color:#294b32;
+    font-size:25px;
+}
+
+.print-invoice-body .brand p{
+    margin:5px 0;
+    color:#667064;
+    font-size:12px;
+}
+
+.print-invoice-body .title{text-align:right}
+
+.print-invoice-body .title h1{
+    margin:0;
+    color:#294b32;
+    font-size:34px;
+    letter-spacing:.5px;
+}
+
+.print-invoice-body .title p{
+    margin:6px 0 0;
+    font-weight:bold;
+    color:#2e7d32;
+}
+
+.print-invoice-body .row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-bottom:12px;
+}
+
+.print-invoice-body .box{
+    border:1px solid #dfe5df;
+    border-radius:12px;
+    padding:10px;
+    background:#fff;
+    min-height:82px;
+}
+
+.print-invoice-body .box h3{
+    margin:0 0 7px;
+    color:#294b32;
+    font-size:14px;
+}
+
+.print-invoice-body .box p{
+    margin:3px 0;
+    font-size:12px;
+    line-height:1.35;
+}
+
+.print-invoice-body .meta{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    margin:12px 0;
+}
+
+.print-invoice-body .meta div{
+    border:1px solid #dfe5df;
+    border-radius:10px;
+    padding:8px;
+    text-align:center;
+    background:#fbfefb;
+}
+
+.print-invoice-body .meta span{
+    display:block;
+    color:#687168;
+    font-size:10px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.print-invoice-body .meta strong{
+    display:block;
+    margin-top:4px;
+    font-size:12px;
+    color:#263128;
+}
+
+.print-invoice-body table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    font-size:12px;
+}
+
+.print-invoice-body th{
+    background:#edf6ee;
+    color:#294b32;
+    text-align:left;
+    padding:9px;
+    border:1px solid #dfe5df;
+}
+
+.print-invoice-body td{
+    padding:9px;
+    border:1px solid #dfe5df;
+    vertical-align:top;
+}
+
+.print-invoice-body .right{text-align:right}
+.print-invoice-body .center{text-align:center}
+.print-invoice-body .bold{font-weight:bold}
+
+.print-invoice-body .total td{
+    font-size:15px;
+    background:#edf6ee;
+    color:#294b32;
+    font-weight:800;
+}
+
+.print-invoice-body .note{
+    margin-top:12px;
+    border-top:1px solid #dfe5df;
+    padding-top:10px;
+    color:#667064;
+    font-size:11px;
+    text-align:center;
+}
+
+.print-invoice-body .actions{
+    position:fixed;
+    top:12px;
+    right:12px;
+    display:flex;
+    gap:8px;
+}
+
+.print-invoice-body .actions button,
+.print-invoice-body .actions a{
+    border:0;
+    border-radius:999px;
+    padding:10px 14px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:13px;
+}
+
+.print-invoice-body .actions a{background:#777}
+
+@page{size:A4;margin:0}
+
+@media(max-width:1050px){
+    .order-info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .review-layout{grid-template-columns:1fr}
+    .review-product-img{height:260px}
+}
+
+@media(max-width:900px){
+    .delivery-grid{grid-template-columns:1fr}
+    .invoice-header-card{flex-direction:column;align-items:flex-start}
+    .invoice-actions{justify-content:flex-start}
+    .products-table{min-width:760px}
+}
+
+@media(max-width:700px){
+    .order-details-container{padding:20px}
+    .order-info-grid{grid-template-columns:1fr}
+    .page-title h1,
+    .details-title-block h1,
+    .review-plant-title{font-size:1.65rem}
+    .action-buttons{justify-content:stretch}
+    .action-buttons .btn{width:100%}
+    .review-product-card,
+    .review-form{padding:18px}
+}
+
+@media print{
+    body{background:white!important;color:#222}
+    .no-print,
+    .header,
+    .footer,
+    .account-sidebar,
+    .breadcrumb,
+    .action-buttons,
+    .timeline{display:none!important}
+    .account-page{padding:0}
+    .container{width:100%;margin:0}
+    .account-layout{display:block}
+    .order-details-container,
+    .invoice-card{box-shadow:none!important;border:0!important;border-radius:0!important;padding:20px!important;width:100%}
+    .order-info-grid{grid-template-columns:repeat(4,1fr);gap:8px}
+    .info-card,
+    .delivery-card{break-inside:avoid;background:white!important}
+    .products-table{font-size:12px;min-width:0}
+    .products-table th,
+    .products-table td{padding:10px}
+    .product-image{width:42px;height:42px}
+    .invoice-header-card .invoice-actions{display:none!important}
+
+    .print-invoice-body{background:white}
+    .print-invoice-body .invoice-page{
+        margin:0;
+        width:210mm;
+        min-height:297mm;
+        padding:12mm 14mm;
+    }
+    .print-invoice-body .actions{display:none!important}
+    .print-invoice-body .box,
+    .print-invoice-body .meta div,
+    .print-invoice-body table,
+    .print-invoice-body tr{break-inside:avoid}
+    .print-invoice-body .note{
+        position:absolute;
+        left:14mm;
+        right:14mm;
+        bottom:10mm;
+    }
+}

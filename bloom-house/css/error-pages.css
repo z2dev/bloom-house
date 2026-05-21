@@ -1,0 +1,342 @@
+/* ================= ERROR PAGES ================= */
+
+.error-page {
+    min-height: 72vh;
+    background:
+        radial-gradient(circle at top left, rgba(47, 94, 74, 0.12), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(232, 216, 168, 0.28), transparent 30%),
+        #f9fbf9;
+    padding: 58px 0 72px;
+}
+
+.error-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-card {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #edf1ed;
+    border-radius: 28px;
+    padding: 42px;
+    box-shadow: 0 18px 45px rgba(25, 55, 36, 0.08);
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 30px;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.error-card::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(47, 94, 74, 0.06);
+    top: -90px;
+    right: -70px;
+}
+
+.error-content {
+    position: relative;
+    z-index: 2;
+}
+
+.error-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #eef5f0;
+    color: #2f5e4a;
+    border: 1px solid #dcebe2;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.error-label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2f5e4a;
+}
+
+.denied-label {
+    background: rgba(180, 35, 24, 0.08);
+    color: #b42318;
+    border-color: rgba(180, 35, 24, 0.16);
+}
+
+.denied-label::before {
+    background: #b42318;
+}
+
+.error-content h1 {
+    color: #1c2b22;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.12;
+    font-weight: 800;
+    max-width: 560px;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.error-content p {
+    color: #6B7D73;
+    font-size: 1rem;
+    max-width: 560px;
+    margin-bottom: 26px;
+}
+
+.error-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.error-btn {
+    min-width: 150px;
+    height: 46px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.primary-btn {
+    background: #2f5e4a;
+    color: #fff;
+    border: 1px solid #2f5e4a;
+}
+
+.primary-btn:hover {
+    background: #3F7A60;
+    border-color: #3F7A60;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #f5faf7;
+    color: #2f5e4a;
+    border: 1px solid #dcebe2;
+}
+
+.secondary-btn:hover {
+    background: #eef5f0;
+    transform: translateY(-2px);
+}
+
+.error-visual {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.error-number {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(5.5rem, 13vw, 9.8rem);
+    font-weight: 800;
+    line-height: 1;
+    color: rgba(47, 94, 74, 0.10);
+    letter-spacing: -8px;
+}
+
+.access-number {
+    color: rgba(180, 35, 24, 0.08);
+}
+
+.plant-pot {
+    width: 210px;
+    height: 250px;
+    position: relative;
+    margin-top: 88px;
+}
+
+.stem {
+    position: absolute;
+    width: 10px;
+    height: 132px;
+    background: #2f5e4a;
+    border-radius: 999px;
+    left: 100px;
+    top: 26px;
+}
+
+.leaf {
+    position: absolute;
+    background: #3F7A60;
+    border-radius: 70% 0 70% 0;
+    box-shadow: 0 10px 25px rgba(47, 94, 74, 0.16);
+}
+
+.leaf-one {
+    width: 78px;
+    height: 48px;
+    left: 28px;
+    top: 44px;
+    transform: rotate(-28deg);
+}
+
+.leaf-two {
+    width: 88px;
+    height: 54px;
+    right: 20px;
+    top: 16px;
+    transform: rotate(44deg) scaleX(-1);
+    background: #2f5e4a;
+}
+
+.leaf-three {
+    width: 72px;
+    height: 46px;
+    right: 30px;
+    top: 88px;
+    transform: rotate(32deg) scaleX(-1);
+    background: #7fa790;
+}
+
+.pot {
+    position: absolute;
+    left: 38px;
+    bottom: 18px;
+    width: 134px;
+    height: 86px;
+    background: #e8d8a8;
+    border-radius: 16px 16px 28px 28px;
+    box-shadow: inset 0 -12px 0 rgba(47, 94, 74, 0.09), 0 14px 25px rgba(25, 55, 36, 0.10);
+}
+
+.pot::before {
+    content: "";
+    position: absolute;
+    width: 154px;
+    height: 24px;
+    left: -10px;
+    top: -13px;
+    background: #2f5e4a;
+    border-radius: 999px;
+}
+
+.lock-plant {
+    position: relative;
+    width: 235px;
+    height: 235px;
+    margin-top: 76px;
+}
+
+.lock-circle {
+    position: absolute;
+    inset: 18px;
+    border-radius: 50%;
+    background: #eef5f0;
+    border: 1px solid #dcebe2;
+}
+
+.lock-body {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+    width: 106px;
+    height: 94px;
+    background: #2f5e4a;
+    color: #fff;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 16px 30px rgba(47, 94, 74, 0.18);
+}
+
+.lock-body::before {
+    content: "";
+    position: absolute;
+    width: 62px;
+    height: 58px;
+    border: 12px solid #2f5e4a;
+    border-bottom: none;
+    border-radius: 45px 45px 0 0;
+    top: -50px;
+    left: 22px;
+}
+
+.lock-body i {
+    font-size: 35px;
+    position: relative;
+    z-index: 2;
+}
+
+.small-leaf {
+    position: absolute;
+    width: 58px;
+    height: 38px;
+    background: #7fa790;
+    border-radius: 70% 0 70% 0;
+}
+
+.leaf-left {
+    left: 16px;
+    bottom: 60px;
+    transform: rotate(-24deg);
+}
+
+.leaf-right {
+    right: 22px;
+    top: 42px;
+    transform: rotate(35deg) scaleX(-1);
+    background: #3F7A60;
+}
+
+@media (max-width: 850px) {
+    .error-card {
+        grid-template-columns: 1fr;
+        padding: 32px 24px;
+    }
+
+    .error-visual {
+        min-height: 260px;
+        order: -1;
+    }
+
+    .plant-pot,
+    .lock-plant {
+        transform: scale(0.82);
+        margin-top: 52px;
+    }
+}
+
+@media (max-width: 560px) {
+    .error-page {
+        padding: 38px 0 50px;
+    }
+
+    .error-card {
+        border-radius: 22px;
+    }
+
+    .error-actions,
+    .error-btn {
+        width: 100%;
+    }
+
+    .error-content h1 {
+        font-size: 2rem;
+    }
+}

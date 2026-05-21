@@ -1,0 +1,123 @@
+:root {
+    --green: #2F5E4A;
+    --green-light: #3F7A60;
+    --border: #eef3f0;
+    --text-dark: #1C2B22;
+    --text-light: #6B7D73;
+}
+
+/* ================= PROFILE PAGE ONLY ================= */
+
+.profile-page {
+    padding: 40px 0 70px;
+    background: #f9fbf9;
+}
+
+.profile-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 8px 18px rgba(0, 40, 20, 0.05);
+}
+
+.profile-card-title {
+    font-size: 1.9rem;
+    color: var(--text-dark);
+    margin-bottom: 22px;
+    font-weight: 700;
+}
+
+.profile-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    border: 1px solid #dce6df;
+    background: #fbfdfb;
+    border-radius: 14px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: 0.25s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(47, 94, 74, 0.15);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.dob-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 1fr;
+    gap: 12px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.btn-save,
+.btn-cancel {
+    border: none;
+    border-radius: 14px;
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-save {
+    background: var(--green);
+    color: #fff;
+}
+
+.btn-save:hover {
+    background: var(--green-light);
+}
+
+.btn-cancel {
+    background: #f1f5f2;
+    color: var(--text-dark);
+}
+
+.btn-cancel:hover {
+    background: #e8efea;
+}
+
+@media (max-width: 950px) {
+    .profile-form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .dob-grid {
+        grid-template-columns: 1fr;
+    }
+}
