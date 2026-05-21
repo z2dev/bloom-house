@@ -161,9 +161,17 @@ http://localhost/bloom-house
 
 # 👥 Team Members
 
+| Name | Role | Pages Worked On |
+|---|---|---|
+| Zahra | Leader | Products, Product Details, Admin Dashboard, Manage Orders, Admin Profile, Admin Edit Order, Admin View Order, Admin Login, Login Required |
+| Nada | Member | Cart, Checkout, Order Confirmation |
+| Riman | Member | Past Orders, Past Order Details, FAQ, Review Plant |
+| Reham | Member | Login, Register, Forgot Password, About, Start |
+| Maram | Member | Home Page, Search Page |
+| Layan | Member | Manage Products, Contact, Admin Contact, Manage FAQs |
+| Lama | Member | Profile, Favourites |
 
 ---
-
 <div align="center">
 
 ### 🌿 Bloom House - Bring Nature Into Your Home
